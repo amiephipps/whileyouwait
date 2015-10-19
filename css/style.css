@@ -1,0 +1,494 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 63.5%;
+}
+
+.flexParent, html, body .mainContainer main .headerItems, body .mainContainer main .selection form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+html {
+  background-blend-mode: multiply;
+  background: #ea412c url(../assets/fastStreetcar.jpg) center center fixed no-repeat;
+  background-size: cover;
+  height: 100vh;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+body {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+body h1 {
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 1%;
+  font-size: 45px;
+  font-size: 4.5rem;
+  text-shadow: 1px 1px 4px black;
+}
+
+@media (max-width: 480px) {
+  body h1 {
+    font-size: 35px;
+    font-size: 3.5rem;
+  }
+}
+
+body h2 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  text-shadow: 1px 1px 4px black;
+}
+
+body h3 {
+  font-weight: 400;
+  font-size: 25px;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 4px black;
+}
+
+@media (max-width: 480px) {
+  body h3 {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+
+body img {
+  max-width: 100%;
+}
+
+body .mainContainer main .wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+body .mainContainer main .headerItems {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2%;
+}
+
+@media (max-width: 960px) {
+  body .mainContainer main .headerItems {
+    padding: 5% 0 17%;
+  }
+}
+
+@media (max-width: 768px) {
+  body .mainContainer main .headerItems {
+    padding: 5% 0 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  body .mainContainer main .headerItems {
+    padding: 15% 0 25%;
+  }
+}
+
+@media (max-width: 320px) {
+  body .mainContainer main .headerItems {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20% 0 25%;
+  }
+}
+
+body .mainContainer main .headerItems .headerImages {
+  width: 15%;
+}
+
+body .mainContainer main .headerItems .headerText {
+  width: 50%;
+}
+
+@media (max-width: 320px) {
+  body .mainContainer main .headerItems .headerText {
+    width: 95%;
+    text-align: center;
+    padding-right: 1.5%;
+  }
+}
+
+body .mainContainer main .begin {
+  margin-top: 5rem;
+  box-shadow: 3px 4px 0px 0px grey;
+  background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: block;
+  width: 30%;
+  cursor: pointer;
+  color: #ea412c;
+  padding: 2%;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #ffffff;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+
+@media (max-width: 768px) {
+  body .mainContainer main .begin {
+    width: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  body .mainContainer main .begin {
+    width: 65%;
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 320px) {
+  body .mainContainer main .begin {
+    margin: 6rem auto 0;
+  }
+}
+
+body .mainContainer main .begin:hover {
+  background: -webkit-linear-gradient(top, #e3dede 50%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #e3dede 50%, #f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+  background-color: #f6f6f6;
+}
+
+body .mainContainer main .begin:active {
+  position: relative;
+  top: 2px;
+}
+
+body .mainContainer main .selection form {
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body .mainContainer main .selection form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body .mainContainer main .selection form label {
+  cursor: pointer;
+  padding: 2% 5%;
+  color: #ea412c;
+  box-shadow: 1px 2px 0px 0px grey;
+  background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+@media (max-width: 480px) {
+  body .mainContainer main .selection form label {
+    padding: 5% 2%;
+    margin: 5% auto;
+    width: 85%;
+  }
+}
+
+body .mainContainer main .selection form label:hover {
+  background: -webkit-linear-gradient(top, #e3dede 50%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #e3dede 50%, #f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+  background-color: #f6f6f6;
+}
+
+body .mainContainer main .selection input[type='radio'] {
+  opacity: 0;
+}
+
+body .mainContainer main .selection #publicationChoice, body .mainContainer main .selection #intersectionQuestion, body .mainContainer main .selection #stopQuestion, body .mainContainer main .selection #routeQuestion {
+  padding: 37vh 0 3rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body .mainContainer main .selection #publicationChoice, body .mainContainer main .selection #intersectionQuestion, body .mainContainer main .selection #stopQuestion, body .mainContainer main .selection #routeQuestion {
+    padding: 5vh 0 0;
+  }
+}
+
+body .mainContainer main .selection select {
+  display: block;
+  margin: 0 auto;
+  width: 35rem;
+  padding: 1%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(../assets/downArrow.gif) no-repeat right #ddd;
+  background-position-x: 98%;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 320px) {
+  body .mainContainer main .selection select {
+    width: 85%;
+  }
+}
+
+body .mainContainer main .selection select:focus {
+  outline: 0;
+}
+
+body .mainContainer main .articleDisplay {
+  text-align: center;
+  text-shadow: 1px 1px 4px black;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 30vh;
+  padding-bottom: 2%;
+}
+
+@media (max-width: 960px) {
+  body .mainContainer main .articleDisplay {
+    padding-top: 20vh;
+  }
+}
+
+@media (max-width: 480px) {
+  body .mainContainer main .articleDisplay {
+    padding-top: 5vh;
+  }
+}
+
+@media (max-width: 320px) {
+  body .mainContainer main .articleDisplay {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+body .mainContainer main .articleDisplay .minFromNow {
+  font-size: 19px;
+  font-size: 1.9rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 320px) {
+  body .mainContainer main .articleDisplay .minFromNow {
+    padding-bottom: 0;
+  }
+}
+
+body .mainContainer main .articleDisplay a {
+  text-decoration: none;
+  color: white;
+}
+
+body .mainContainer main .articleDisplay a:hover {
+  text-decoration: underline;
+}
+
+body .mainContainer main .articleDisplay a:focus {
+  text-decoration: underline;
+}
+
+body .mainContainer main .articleDisplay a .article {
+  font-size: 24px;
+  font-size: 2.4rem;
+}

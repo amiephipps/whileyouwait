@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>While You Wait</title>
+	<link rel="shortcut icon" href="assets/paperIcon.png" type="image/x-icon" />
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="mainContainer">
+		<main id="main" class="wrapper">
+			<div class="headerItems">
+				<div class="headerImages">
+					<img src="assets/paper.svg" alt="piece of paper representing an article">
+				</div>
+				<div class="headerText">
+					<h1>While You Wait</h1>
+					<h3>Bored waiting for the ttc? Read a Medium article or New York Times Magazine article before your bus or streetcar arrives.</h3>
+					<a class="begin">Begin</a>
+				</div>
+			</div>
+
+
+			<div class="selection" id="selection">
+				<h3 id="publicationChoice">Please select a publication:</h3>
+				<form>
+					<input type="radio" name="articleChoice" class="read" id="read" value="nyt" required><label for="read">New York Times Magazine</label>
+
+					<input type="radio" name="articleChoice" class="video" id="video" value="medium"><label for="video">Medium Article</label>
+				</form>
+
+				<h3 id="intersectionQuestion">Please select your closest intersection:</h3>
+				<select name="intersection" id="intersection">
+					<option selected="selected">Where are you?</option>
+				</select>
+
+				<h3 id="stopQuestion">Please select your closest stop:</h3>
+				<select name="stop" id="stop">
+					<option class="placeholder" selected="selected">Select a direction</option>
+				</select>
+
+				<h3 id="routeQuestion">Please select the route you would like:</h3>
+				<select name="route" id="route">
+					<option class="placeholder" selected="selected">Select a route</option>
+				</select>
+			</div>
+
+			<div class="articleDisplay" id="articleDisplay">
+				<p class="minFromNow"></p>
+				<a href="" class="link" target="_blank">
+					<h2 class="title"></h2>
+					<p class="article"></p>
+				</a>
+			</div>
+	</main>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="javascript/smoothscroll.js"></script>
+<script src="javascript/script.js"></script>
+</body>
+</html>
+
