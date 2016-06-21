@@ -35,213 +35,165 @@ html {
   background-blend-mode: multiply;
   background: #ea412c url(../assets/fastStreetcar.jpg) center center fixed no-repeat;
   background-size: cover;
-  height: 100vh;
-  @extend .flexParent;
-  justify-content: space-around;
+  height: 100%;
 }
 
 body {
   color: white;
   font-family: 'Raleway', sans-serif;
-  h1 {
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-top: 1%;
-    @include fontSize(45);
-    text-shadow: 1px 1px 4px black;
-    @include bp(small) {
-      @include fontSize(35);
+}
+
+h1 {
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 1%;
+  @include fontSize(60);
+}
+h2 {
+  @include fontSize(32);
+}
+img {
+  max-width: 100%;
+}
+.mainContainer {
+  main {
+    .wrapper {
+      max-width: 1080px;
+      margin: 0 auto;
     }
-  }
-  h2 {
-    @include fontSize(32);
-    text-shadow: 1px 1px 4px black;
-  }
-  h3 {
-    font-weight: 400;
-    @include fontSize(25);
-    text-shadow: 1px 1px 4px black;
-    @include bp(small) {
-      @include fontSize(20);
-    }  
-  }
-  img {
-    max-width: 100%;
-  }
-  .mainContainer {
-    main {
-      .wrapper {
-        max-width: 1080px;
-        margin: 0 auto;
+      .headerText {
+        width: 45%;
+        margin-left: 50%;
+        padding-top: 10%;
+        h3 {
+          font-weight: 400;
+          @include fontSize(18);
+        }
+        @include bp(small) {
+          width: 90%;
+          margin-left: 5%;
+        }
       }
-      .headerItems {
-        @extend .flexParent;
-        align-items: flex-end;
-        justify-content: center;
-        flex-direction: column;
-        padding-top: 2%;
+    }
+    .begin {
+      padding: 2% 3%;
+      border: 4px solid white;
+      text-transform: uppercase;
+      display: inline-block;
+      @include fontSize(16);
+      border-radius: 15px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      cursor: pointer;
+      &:hover, &:active {
+        background: rgba(255, 255, 255, 0.3);
+        color: black;
+      }
+    }
+    .selection {
+      width: 45%;
+      margin-left: 50%;
+      margin-top: 12%;
+      @include bp(small) {
+        width: 90%;
+        margin-left: 5%;
+      }
+      h3 {
+        font-weight: 400;
+        @include fontSize(30);
+      }
+      form {
         @include bp(large) {
-          padding: 5% 0 17%;
-        }
-        @include bp(medium) {
-          padding: 5% 0 25%;
-        }
-        @include bp(small) {
-          padding: 15% 0 25%;
-        }
-        @include bp(mobile) {
-          flex-direction: column;
-          align-items: center;
-          padding: 20% 0 25%;
-        }
-        .headerImages {
-          width: 15%;
-        }
-        .headerText {
-          width: 50%;
-          @include bp(mobile) {
-            width: 95%;
-            text-align: center;
-            padding-right: 1.5%;
-          }
-        }
-      }
-      .begin {
-        margin-top: 5rem;
-        box-shadow: 3px 4px 0px 0px grey;
-        background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-        background-color: #ffffff;
-        border-radius: 6px;
-        border: 1px solid #dcdcdc;
-        display: block;
-        width: 30%;
-        cursor: pointer;
-        color: #ea412c;
-        padding: 2%;
-        text-align: center;
-        text-decoration: none;
-        text-shadow: 1px 1px 0px #ffffff;
-        text-transform: uppercase;
-        @include fontSize(28);
-        @include bp(medium) {
-          width: 55%;
-        }
-        @include bp(small) {
-          width: 65%;
-          margin-top: 10rem;
-        }
-        @include bp(mobile) {
-          margin: 6rem auto 0;
-        }
-        &:hover {
-          background: linear-gradient(to bottom, #e3dede 50%, #f6f6f6 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
-          background-color: #f6f6f6;
-        }
-        &:active {
-          position: relative;
-          top: 2px;
-        }
-      }
-      .selection {
-        form {
           text-align: center;
-          @include bp(small) {
-            @extend .flexParent;
-            flex-direction: column;
-          }
-          label {
-            cursor: pointer;
-            padding: 2% 5%;
-            color: #ea412c;
-            box-shadow: 1px 2px 0px 0px grey;
-            background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-            background-color: #ffffff;
-            border-radius: 6px;
-            border: 1px solid #dcdcdc;
-            letter-spacing: 1px;
-            @include fontSize(20);
-            @include bp(small) {
-              padding: 5% 2%;
-              margin: 5% auto;
-              width: 85%;
-            }
-            &:hover {
-              background: linear-gradient(to bottom, #e3dede 50%, #f6f6f6 100%);
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
-              background-color: #f6f6f6;
-            }
-          }
         }
-        input[type='radio'] {
-          opacity: 0;
-        }
-        #publicationChoice, #intersectionQuestion, #stopQuestion, #routeQuestion {
-          padding: 37vh 0 3rem;
-          text-align: center;
-          @include bp(small) {
-            padding: 5vh 0 0;
-          }
-        }
-        select {
-          display: block;
-          margin: 0 auto;
-          width: 35rem;
-          padding: 1%;
-          appearance: none;
-          background: url(../assets/downArrow.gif) no-repeat right #ddd;
-          background-position-x: 98%;
+        label {
+          padding: 2% 4%;
+          border: 4px solid white;
+          text-transform: uppercase;
+          margin-top: 3%;
+          display: inline-block;
           @include fontSize(16);
-          @include bp(mobile) {
-            width: 85%;
-          }
-          &:focus {
-            outline: 0;
+          border-radius: 15px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          cursor: pointer;
+          &:hover, &:active {
+            background: rgba(255, 255, 255, 0.3);
+            color: black;
           }
         }
       }
-      .articleDisplay {
-        text-align: center;
-        text-shadow: 1px 1px 4px black;
-        margin: 0 auto;
-        width: 80%;
-        padding-top: 30vh;
-        padding-bottom: 2%;
-        @include bp(large) {
-          padding-top: 20vh;
-        }
-        @include bp(small) {
-          padding-top: 5vh;
-        }
+      input[type='radio'] {
+        opacity: 0;
+      }
+      select {
+        display: block;
+        width: 35rem;
+        padding: 1%;
+        appearance: none;
+        background: url(../assets/downArrow.gif) no-repeat right #ddd;
+        background-position-x: 98%;
+        @include fontSize(16);
         @include bp(mobile) {
-          padding-top: 0;
-          padding-bottom: 2rem;
+          width: 85%;
         }
-        .minFromNow {
-          @include fontSize(19);
-          padding-bottom: 5rem;
-          @include bp(mobile) {
-            padding-bottom: 0;
-          }
+        &:focus {
+          outline: 0;
         }
-        a {
-          text-decoration: none;
-          color: white;
-          &:hover {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
-          .article {
-            @include fontSize(24);
-          }
-        }
-      } 
+      }
     }
+    .articleDisplay {
+      width: 45%;
+      margin-left: 50%;
+      margin-top: 10%;
+      @include bp(small) {
+        width: 90%;
+        margin-left: 5%;
+      }
+      .minFromNow {
+        @include fontSize(30);
+        padding-bottom: 4rem;
+        @include bp(mobile) {
+          @include fontSize(2.5);
+        }
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+        .article {
+          @include fontSize(17);
+        }
+      }
+      .resetQuiz {
+        padding: 2% 3%;
+        border: 4px solid white;
+        text-transform: uppercase;
+        display: inline-block;
+        @include fontSize(16);
+        background: none;
+        margin-top: 10%;
+        color: white;
+        border-radius: 15px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        cursor: pointer;
+        &:hover, &:active {
+          background: rgba(255, 255, 255, 0.3);
+          color: black;
+        }
+      }
+    } 
   }
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
 }
 
 

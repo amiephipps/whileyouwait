@@ -2,26 +2,28 @@ var whileYouWait = {};
 
 whileYouWait.clickOfBeginButton = function() {
 	$('.begin').on('click', function() {
-		$('.begin, .headerItems').hide();
+		$('.begin, .headerText, #resetQuiz').hide();
 		$('label, #publicationChoice').fadeIn();
 	});
 	$('input[name=articleChoice]').on('click', function() {
-		$('label, #publicationChoice').hide();
+		$('label, #publicationChoice, #resetQuiz').hide();
 		$('#intersection, #intersectionQuestion').fadeIn();
 	});
 	$('#intersection').on('change', function() {
-		$('#intersection, #intersectionQuestion').hide();
+		$('#intersection, #intersectionQuestion, #resetQuiz').hide();
 		$('#stopQuestion, #stop').fadeIn() 
 	});
 	$('#stop').on('change', function() {
-		$('#stop, #stopQuestion').hide();
+		$('#stop, #stopQuestion, #resetQuiz').hide();
 		$('#routeQuestion, #route').fadeIn() 
 	});
 	$('#route').on('change', function() {
 		$('#route, #routeQuestion').hide();
+		$('.selection').addClass('displayNone');
 		$('.link').fadeIn() 
 		$('.title').fadeIn();
 		$('.article').fadeIn();
+		$('#resetQuiz').fadeIn ();
 	});
 };
 
@@ -97,7 +99,7 @@ whileYouWait.getUserLocationAndTTCRoutes = function() {
 			}).then(function(ttcData) {
 				whileYouWait.ttcInfo = ttcData.locations;
 
-				//loop through the routes array and create option elements for the drop down list and populate it
+				//loop through the routes array and create option elements for the drop down list for which intersection the user is at and populate it
 				var select = $('#intersection');
 				$.each(whileYouWait.ttcInfo, function(i, value) {
 					var option = $('<option value="' + value.uri + '">' + value.name + '</option>');
@@ -106,7 +108,7 @@ whileYouWait.getUserLocationAndTTCRoutes = function() {
 			});
 		});
 	} else {
-		$('<h2>').text('Geolocation is not support!');
+		$('<h2>').text('Geolocation is not supported!');
 	} 
 };
 
@@ -138,7 +140,7 @@ whileYouWait.getNYTArticles = function() {
 //api call for medium
 whileYouWait.getMediumArticles = function() {
 	$.ajax({
-		url: 'https://node-darcyclarke.c9users.io/?q=http://medium.com',
+		url: 'http://159.203.6.167:3000/?q=http://medium.com',
 		method: 'GET',
 		dataType: 'jsonp'
 	}).then(function(res) {
@@ -199,7 +201,7 @@ whileYouWait.displayArticle = function(minFromNow) {
 };
 
 whileYouWait.init = function() {
-	$('label, #publicationChoice, select, #intersectionQuestion, #stopQuestion, #routeQuestion').hide();
+	$('label, #publicationChoice, select, #intersectionQuestion, #stopQuestion, #resetQuiz, #routeQuestion').hide();
 	whileYouWait.clickOfBeginButton();
 	whileYouWait.setupEventHandlers();
 	whileYouWait.getUserLocationAndTTCRoutes();	
@@ -209,4 +211,7 @@ whileYouWait.init = function() {
 
 $(function() {
 	whileYouWait.init();
+	$('#resetQuiz').on('click', function() {
+		window.location.reload(true);
+	});
 });
